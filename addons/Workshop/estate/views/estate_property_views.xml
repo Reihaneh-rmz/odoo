@@ -5,7 +5,7 @@
         <field name="view_mode">kanban,list,form</field>
     </record>
 
-    <record id="estate_property_view_kanban" model="ir.ui.view">
+    <record id="estate_property_view_list" model="ir.ui.view">
         <field name="name">estate.property.list</field>
         <field name="model">estate.property</field>
         <field name="arch" type="xml">
@@ -17,12 +17,37 @@
         </field>
     </record>
 
+    <record id="estate_property_view_kanban" model="ir.ui.view">
+        <field name="name">estate.property.kanban</field>
+        <field name="model">estate.property</field>
+        <field name="type">kanban</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="state"/>
+                <templates>
+                    <t t-name="card" class="flex-row">
+                        <aside class="o_kanban_aside_full">
+                            <field name="image" class="o_kanban_image_fill w-100" widget="image" options="{'img_class': 'object-fit-cover'}" alt="Property image"/>
+                        </aside>
+                        <main class="ps-2">
+                            <field name="name" class="fw-bold"/>
+                            <div>Expected Price: <field name="expected_price"/></div>
+                            <div invisible="state != 'sold'">Best Offer: <field name="best_price"/></div>
+                            <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                        </main>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
     <record id="estate_property_view_form" model="ir.ui.view">
         <field name="name">estate.property.form</field>
         <field name="model">estate.property</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
                     <header>
                         <button name = "sell_property" type = "object" string = "Sell" invisible = "state in ('sold','cancelled')" />
                         <button name = "cancel_property" type = "object" string = "Cancel" invisible = "state in ('sold','cancelled')" />

@@ -7,6 +7,7 @@ class EstateProperty(models.Model):
     _description = "Real Estate Properties"
 
     name = fields.Char(required=True)
+    image = fields.Image("Photo", max_width=1920, max_height=1920)
     description = fields.Text()
     date_availability = fields.Date()
     expected_price = fields.Float()
