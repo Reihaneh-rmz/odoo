@@ -34,6 +34,8 @@
                             <div>Expected Price: <field name="expected_price"/></div>
                             <div invisible="state != 'sold'">Best Offer: <field name="best_price"/></div>
                             <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                            <widget name = "web_ribbon" title = "Cancelled" bg_color = "bg-danger" invisible="state != 'cancelled'"/>
+                            <widget name = "web_ribbon" title = "Sold" bg_color = "bg-success" invisible="state != 'sold'"/>
                         </main>
                     </t>
                 </templates>
