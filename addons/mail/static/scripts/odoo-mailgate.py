@@ -65,7 +65,7 @@ def main():
     op.add_option("-u", "--userid", dest="userid", help="Odoo user id to connect with (default: %default)", default=1, type=int)
     op.add_option("-p", "--password", dest="password", help="Odoo user password (default: %default)", default='admin')
     op.add_option("--host", dest="host", help="Odoo host (default: %default)", default='localhost')
-    op.add_option("--port", dest="port", help="Odoo port (default: %default)", default=8069, type=int)
+    op.add_option("--port", dest="port", help="Odoo port (default: %default)", default=8070, type=int)
     op.add_option("--proto", dest="protocol", help="Protocol to use (default: %default), http or https", default='http')
     op.add_option("--debug", dest="debug", action="store_true", help="Enable debug (may lead to stack traces in bounce mails)", default=False)
     op.add_option("--retry-status", dest="retry", action="store_true", help="Send temporary failure status code on connection errors.", default=False)

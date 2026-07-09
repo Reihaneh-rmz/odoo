@@ -12,7 +12,7 @@ export const CustomerDisplayDataService = {
             const intervalId = setInterval(async () => {
                 try {
                     const response = await fetch(
-                        `http://localhost:8069/hw_proxy/customer_facing_display`,
+                        `http://localhost:8070/hw_proxy/customer_facing_display`,
                         {
                             method: "POST",
                             headers: {

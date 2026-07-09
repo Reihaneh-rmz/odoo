@@ -28,7 +28,7 @@ export function deduceUrl(url) {
         url = `${protocol}//${url}`;
     }
     if (url.indexOf(":", 6) < 0) {
-        url += ":" + (protocol === "https:" ? 443 : 8069);
+        url += ":" + (protocol === "https:" ? 443 : 8070);
     }
     return url;
 }

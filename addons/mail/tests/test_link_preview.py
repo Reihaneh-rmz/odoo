@@ -195,12 +195,12 @@ class TestLinkPreview(MailCommon):
             requests.Session, "head", self._patch_head_html
         ):
             urls = [
-                ("http://localhost:8069/", "http://localhost:8069/odoo", 0),
-                ("http://localhost:8069/", "http://localhost:8069/odoo/test", 0),
-                ("http://localhost:8069/", "http://localhost:8069/web/test", 0),
-                ("http://localhost:8069/", "http://localhost:8069/", 1),
-                ("http://localhost:8069/", "http://localhost:8069/odoo-experience", 1),
-                ("http://localhost:8069/", "http://localhost:8069/chat/5/bFtIfYHRco", 0),
+                ("http://localhost:8070/", "http://localhost:8070/odoo", 0),
+                ("http://localhost:8070/", "http://localhost:8070/odoo/test", 0),
+                ("http://localhost:8070/", "http://localhost:8070/web/test", 0),
+                ("http://localhost:8070/", "http://localhost:8070/", 1),
+                ("http://localhost:8070/", "http://localhost:8070/odoo-experience", 1),
+                ("http://localhost:8070/", "http://localhost:8070/chat/5/bFtIfYHRco", 0),
                 ("https://www.odoo.com/", "https://www.odoo.com/web", 0),
                 ("https://www.odoo.com/", "https://www.odoo.com/odoo", 0),
                 ("https://www.odoo.com/", "https://www.odoo.com/odoo/", 0),

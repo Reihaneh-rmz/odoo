@@ -58,7 +58,7 @@ def run_cmd(cmd, chdir=None, timeout=None):
     return subprocess.run(cmd, cwd=chdir, timeout=timeout)
 
 
-def _rpc_count_modules(addr='http://127.0.0.1', port=8069, dbname='mycompany'):
+def _rpc_count_modules(addr='http://127.0.0.1', port=8070, dbname='mycompany'):
     uid = xmlrpclib.ServerProxy('%s:%s/xmlrpc/2/common' % (addr, port)).authenticate(
         dbname, 'admin', 'admin', {}
     )
@@ -301,7 +301,7 @@ class DockerTgz(Docker):
             'su odoo -s /bin/bash -c "/var/lib/odoo/odoovenv/bin/odoo -d mycompany -i base --stop-after-init"',
             'su odoo -s /bin/bash -c "/var/lib/odoo/odoovenv/bin/odoo -d mycompany --pidfile=/data/src/odoo.pid"',
         ]
-        self.run(' && '.join(cmds), self.args.build_dir, 'odoo-src-test-%s' % TSTAMP, user='root', detach=True, exposed_port=8069, timeout=300)
+        self.run(' && '.join(cmds), self.args.build_dir, 'odoo-src-test-%s' % TSTAMP, user='root', detach=True, exposed_port=8070, timeout=300)
         self.test_odoo()
         logging.info('Finished testing tgz package')
 
@@ -331,7 +331,7 @@ class DockerDeb(Docker):
             f'/usr/bin/apt-get install -y /data/src/odoo_{VERSION}.{TSTAMP}_all.deb',
             'su odoo -s /bin/bash -c "odoo -d mycompany -i base --pidfile=/data/src/odoo.pid"',
         ]
-        self.run(' && '.join(cmds), self.args.build_dir, 'odoo-deb-test-%s' % TSTAMP, user='root', detach=True, exposed_port=8069, timeout=300)
+        self.run(' && '.join(cmds), self.args.build_dir, 'odoo-deb-test-%s' % TSTAMP, user='root', detach=True, exposed_port=8070, timeout=300)
         self.test_odoo()
         logging.info('Finished testing debian package')
 
@@ -371,7 +371,7 @@ class DockerRpm(Docker):
             'su odoo -s /bin/bash -c "odoo -c /etc/odoo/odoo.conf -d mycompany -i base --stop-after-init"',
             'su odoo -s /bin/bash -c "odoo -c /etc/odoo/odoo.conf -d mycompany --pidfile=/data/src/odoo.pid"',
         ]
-        self.run(' && '.join(cmds), args.build_dir, 'odoo-rpm-test-%s' % TSTAMP, user='root', detach=True, exposed_port=8069, timeout=300)
+        self.run(' && '.join(cmds), args.build_dir, 'odoo-rpm-test-%s' % TSTAMP, user='root', detach=True, exposed_port=8070, timeout=300)
         self.test_odoo()
         logging.info('Finished testing rpm package')
 

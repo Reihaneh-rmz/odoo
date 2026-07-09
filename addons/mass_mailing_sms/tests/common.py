@@ -233,7 +233,7 @@ class MassSMSCase(SMSCase, MockLinkTracker):
         easy information in body, only body. We currently click on all found
         shortened links. """
         for url in re.findall(mail.TEXT_URL_REGEX, body):
-            if '/r/' in url:  # shortened link, like 'http://localhost:8069/r/LBG/s/53'
+            if '/r/' in url:  # shortened link, like 'http://localhost:8070/r/LBG/s/53'
                 parsed_url = werkzeug.urls.url_parse(url)
                 path_items = parsed_url.path.split('/')
                 code, sms_id_int = path_items[2], int(path_items[4])

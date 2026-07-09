@@ -31,7 +31,7 @@ class DisplayDriver(Driver):
 
         saved_url, self.orientation = helpers.load_browser_state()
         self._x_screen = device.get('x_screen', '0')
-        self.url = saved_url or self.get_url_from_db() or 'http://localhost:8069/status/'
+        self.url = saved_url or self.get_url_from_db() or 'http://localhost:8070/status/'
         self.browser = Browser(self.url, self._x_screen, os.environ.copy())
         self.set_orientation(self.orientation)
 
@@ -57,7 +57,7 @@ class DisplayDriver(Driver):
     def run(self):
         while not self._stopped.is_set() and "pos_customer_display" not in self.url:
             time.sleep(60)
-            if self.url != 'http://localhost:8069/status/' and self.browser.state != BrowserState.KIOSK:
+            if self.url != 'http://localhost:8070/status/' and self.browser.state != BrowserState.KIOSK:
                 # Refresh the page every minute
                 self.browser.refresh()
 
@@ -65,7 +65,7 @@ class DisplayDriver(Driver):
         self.url = (
             url
             or helpers.load_browser_state()[0]
-            or 'http://localhost:8069/status/'
+            or 'http://localhost:8070/status/'
         )
 
         browser_state = BrowserState.KIOSK if "/pos-self/" in self.url else BrowserState.FULLSCREEN

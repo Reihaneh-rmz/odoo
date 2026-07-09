@@ -24,7 +24,7 @@ class TestPaymentTransaction(EcpayCommon):
     def test_no_item_missing_from_rendering_values(self):
         """Test that the rendered values are conform to the transaction fields."""
         # Create a transaction with known values
-        localhost_url = "http://127.0.0.1:8069"
+        localhost_url = "http://127.0.0.1:8070"
         self.env["ir.config_parameter"].set_param("web.base.url", localhost_url)
 
         tx = self._create_transaction(

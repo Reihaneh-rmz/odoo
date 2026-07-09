@@ -364,7 +364,7 @@ Function .onInit
 FunctionEnd
 
 Function LaunchLink
-    ExecShell "open" "http://localhost:8069/"
+    ExecShell "open" "http://localhost:8070/"
 FunctionEnd
 
 Function RestartOdooService

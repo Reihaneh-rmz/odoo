@@ -39,8 +39,8 @@ application.initialize()
 # ----------------------------------------------------------
 # Gunicorn
 # ----------------------------------------------------------
-# Standard port is 8069
-bind = '127.0.0.1:8069'
+# Standard port is 8070
+bind = '127.0.0.1:8070'
 pidfile = '.gunicorn.pid'
 workers = 4
 timeout = 240

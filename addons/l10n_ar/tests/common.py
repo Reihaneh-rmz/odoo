@@ -35,7 +35,7 @@ class TestArCommon(AccountTestInvoicingCommon):
             "country_id": cls.env.ref("base.ar").id,
             "state_id": cls.env.ref("base.state_ar_s").id,
             "zip": '2000',
-            "phone": '+1 555 123 8069',
+            "phone": '+1 555 123 8070',
             "email": 'info@example.com',
             "website": 'www.example.com',
         })
@@ -58,7 +58,7 @@ class TestArCommon(AccountTestInvoicingCommon):
             "country_id": cls.env.ref("base.ar").id,
             "state_id": cls.env.ref("base.state_ar_s").id,
             "zip": '2000',
-            "phone": '+1 555 123 8069',
+            "phone": '+1 555 123 8070',
             "email": 'info@example.com',
             "website": 'www.example.com',
         })

@@ -24,7 +24,7 @@ class PasskeyTest(HttpCaseWithUserDemo):
                 'user': self.admin_user,
                 'credential_identifier': 'L2p6jvcWuCMTRmkZHKqqvQbz0Dhk3JbJOx1F8ci99nSNjlfx3Z7nkigMdUACLggB',
                 'public_key': 'pQECAyYgASFYIC9qeo73FrgjE0ZpGRwxLIG50L4kNlhj2DIyqSc_YiRSIlgg2q6bL2-IoJ6j_GkVTdfPKyx8RF5e8wzX9-Zk37AykM8=',
-                'host': 'http://localhost:8069',
+                'host': 'http://localhost:8070',
                 'registration': {
                     'challenge': 'Uoa6M5jEP7I3ToyK9QA0vf8IcsezfeJk0rgs1pLUWrMgF9vd0-7Dv5iV3xW7r70-YqkweRXhACmDPmhHKtAIeQ',
                     'response': {
@@ -67,7 +67,7 @@ class PasskeyTest(HttpCaseWithUserDemo):
                 'user': self.admin_user,
                 'credential_identifier': 'wtw0u7D8rp7nq7WBWFCt_FRhEHpU6EHvEgTn3BBid5N-UE5a9XCzS8NaVuh7ydFz',
                 'public_key': 'pQECAyYgASFYIMLcNLuw_K6e56u1gVioLcAJF8v8eUw7kfqTOqDdl7nFIlggFSs_nZWewd_JqzeWzXmJ6Wmn_nKuo82rCdoOZ-oewOU=',
-                'host': 'http://localhost:8069',
+                'host': 'http://localhost:8070',
                 'auth': {
                     'challenge': 'oj09zruUyqUMIFO0ol5UltUd955Qqw9iche5w_g9k6jByR69ioWtnC-RWLRie_8sqHO_T2bICJplaQNPRxfpeA',
                     'response': {
@@ -112,7 +112,7 @@ class PasskeyTest(HttpCaseWithUserDemo):
                 'user': self.user_demo,
                 'credential_identifier': '723TCjL_RdQHFk3Ysp-HUymcWoazFi3ZdfZ1bIn6MYC5bAXvI6B-j8G-UA1taMO0',
                 'public_key': 'pQECAyYgASFYIO9t0woy_0XUBxZN2LKpzFmzmauPpdgt7B1EnoVXHL56IlggUJWIu-UCOAFOCAMUXDXb36pJ49aWNI9Z7njiLQt7amw=',
-                'host': 'http://localhost:8069',
+                'host': 'http://localhost:8070',
                 'auth': {
                     'challenge': 'MTIzNDU',
                     'response': {

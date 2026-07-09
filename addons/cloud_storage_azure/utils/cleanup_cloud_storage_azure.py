@@ -31,7 +31,7 @@ from urllib.parse import quote
 # 5, 6 are done with threadpool
 
 # odoo
-odoo_url = 'http://localhost:8069'
+odoo_url = 'http://localhost:8070'
 odoo_db = 'odoo_db'
 odoo_username = 'admin'
 odoo_password = 'admin'

@@ -59,7 +59,7 @@ const makeSession = ({
     },
     user_id: [userId],
     username: "admin",
-    ["web.base.url"]: "http://localhost:8069",
+    ["web.base.url"]: "http://localhost:8070",
     view_info,
 });
 

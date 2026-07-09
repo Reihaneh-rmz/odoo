@@ -95,7 +95,7 @@ class TestConfigManager(TransactionCase):
 
             # HTTP
             'http_interface': '0.0.0.0',
-            'http_port': 8069,
+            'http_port': 8070,
             'gevent_port': 8072,
             'http_enable': True,
             'proxy_mode': False,
@@ -344,7 +344,7 @@ class TestConfigManager(TransactionCase):
             'geoip_city_db': '/usr/share/GeoIP/GeoLite2-City.mmdb',
             'http_enable': True,
             'http_interface': '0.0.0.0',
-            'http_port': 8069,
+            'http_port': 8070,
             'import_file_maxbytes': 10485760,
             'import_file_timeout': 3,
             'import_partial': '',
